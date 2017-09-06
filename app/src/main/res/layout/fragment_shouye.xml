@@ -1,0 +1,52 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.administrator.funtv.fragment.shouye.ShouyeFragment">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.example.administrator.funtv.widget.AppToolBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_toolbar_height"
+            app:icon="@mipmap/compony_logo"
+            app:layout_scrollFlags="enterAlways|scroll"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/pindao_tablayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/main"
+                app:tabSelectedTextColor="@color/main"/>
+
+            <ImageView
+                android:id="@+id/pindao_setting_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_tuijian_more" />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    <ImageView
+        android:id="@+id/loading_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/loading_anim"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

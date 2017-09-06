@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.funtv.activity.PlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/play_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/play_new_rl"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <io.vov.vitamio.widget.VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/loading_iv"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/video_loading"/>
+
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_landscape_top"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/tmblack">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/iv_landscape_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@mipmap/fullscreen_unpressed"/>
+                <TextView
+                    android:layout_toRightOf="@id/iv_landscape_back"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/tv_landscape_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的标题"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/iv_landscape_heart"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/live_ver_focus_on"/>
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_landscape_qxd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="超清"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_toLeftOf="@id/tv_landscape_qxd"
+                    android:layout_marginRight="30dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_landscape_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_landscape_bottom"
+                android:layout_alignParentBottom="true"
+                android:background="@color/tmblack"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <ImageView
+                    android:id="@+id/iv_landscape_pause"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pause_unpressed"/>
+                <ImageView
+                    android:id="@+id/iv_landscape_refresh"
+                    android:layout_toRightOf="@id/iv_landscape_pause"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/fresh_unpressed"/>
+                <ImageView
+                    android:id="@+id/iv_landscape_commenting"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/commenting_unpressed"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/iv_landscape_refresh"
+                    android:layout_toLeftOf="@id/iv_landscape_commenting">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/iv_landscape_hot"
+                        android:src="@mipmap/live_hotword_pressed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/qianhei"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"/>
+                    <EditText
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_landscape"
+                        android:hint="弹幕走一走,活到九十九"
+                        android:textSize="10sp"
+                        android:background="@null"
+                        android:textColorHint="@color/qianhei"/>
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/iv_landscape_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/live_send_black"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/danmu_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:id="@+id/iv_model_back"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/live_detail_unpressed"/>
+        <ImageView
+            android:id="@+id/iv_model_pause"
+            android:layout_margin="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_live_pause"/>
+
+        <ImageView
+            android:id="@+id/iv_model_screen"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/full_screen_unpressed"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_play"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_play_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_play_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_play_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/iv_play_guanzhu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/btn_focus_normal"/>
+            <TextView
+                android:id="@+id/tv_play_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="关    注"
+                android:textSize="10sp"
+                android:textColor="@color/gray"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/play_chat_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/ivory"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:id="@+id/edit_ll"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_bottom"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_landscape_refresh"
+        android:layout_toLeftOf="@id/iv_landscape_commenting">
+
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/chat_edit"
+            android:hint="和主播说点什么吧..."
+            android:textSize="15sp"
+            android:background="@null"
+            android:textColorHint="@color/tomato"/>
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/chat_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/live_send_black"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

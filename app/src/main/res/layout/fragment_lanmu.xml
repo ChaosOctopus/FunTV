@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.administrator.funtv.fragment.lanmu.LanmuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.example.administrator.funtv.widget.AppToolBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        app:title="栏目"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_lanmu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

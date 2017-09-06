@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <ImageView
+        android:id="@+id/thumb_iv"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_alignBottom="@id/thumb_iv"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/nick_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/shenhei"
+        android:layout_below="@id/thumb_iv"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/fans_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/qianhei"
+        android:layout_below="@id/thumb_iv"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@mipmap/btn_home_content_rignt_cc_normal"
+        android:textSize="14sp"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>
